@@ -22,7 +22,7 @@ pipeline {
             agent { label 'built-in' }
             steps {
                 echo 'Deploying to staging...'
-                sh './deploy/deploy-to-staging.sh'
+                sh './devops-pipeline/deploy/deploy-to-staging.sh'
             }
         }
 
@@ -37,7 +37,7 @@ pipeline {
             agent { label 'built-in' }
             steps {
                 echo 'Deploying to production...'
-                sh './deploy/deploy-to-production.sh'
+                sh './devops-pipeline/deploy/deploy-to-production.sh'
             }
         }
     }
