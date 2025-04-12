@@ -5,7 +5,7 @@ pipeline {
         stage('Build') {
             agent { label 'docker' }
             steps {
-                echo '🔨 Building Python code...'
+                echo 'Building Python code...'
                 sh 'python3 -m compileall src'
             }
         }
