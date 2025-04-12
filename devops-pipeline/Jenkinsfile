@@ -14,7 +14,7 @@ pipeline {
             agent { label 'docker' }
             steps {
                 echo 'Running unit tests...'
-                sh 'python3 -m unittest discover test'
+                sh 'python3 -m unittest discover test || exit 1'
             }
         }
 
